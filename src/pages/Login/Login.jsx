@@ -1,6 +1,8 @@
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import loginImage from '../../assets/login.jpg'
+import { FaGoogle } from "react-icons/fa";
+
 
 
 const Login = () => {
@@ -39,10 +41,12 @@ const Login = () => {
                                 <label className="label">
                                     <p className="label-text-alt">New here? Please <Link className="text-[#7cc051]" to='/register'>Register.</Link></p>
                                 </label>
-                                
+
                             </div>
+
                             <div className="form-control mt-6">
-                                <button className="btn bg-[#7cc051] text-white">Login</button>
+                                <button className="btn bg-[#7cc051] text-white mb-3">Login</button>
+                                <button className="btn bg-[#fd8250] text-white"><FaGoogle />Login With Google</button>
                             </div>
                         </form>
                     </div>
