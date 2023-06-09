@@ -32,7 +32,7 @@ const Login = () => {
                                 </label>
                                 <input type="password" {...register("password", { required: true })} placeholder="Password" className="input input-bordered" />
                                 <label className="label">
-                                    <p className="label-text-alt">New here? Please <Link className="text-[#7cc051]" to='/register'>Register</Link></p>
+                                    <p className="label-text-alt">New here? Please <Link className="text-[#7cc051]" to='/register'>Register.</Link></p>
                                 </label>
                             </div>
                             <div className="form-control mt-6">
