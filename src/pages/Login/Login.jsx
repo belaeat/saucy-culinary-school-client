@@ -2,14 +2,26 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import loginImage from '../../assets/login.jpg'
 import { FaGoogle } from "react-icons/fa";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 
 
 const Login = () => {
 
+    // auth context 
+    const { signIn } = useContext(AuthContext)
+
     const { register, handleSubmit, formState: { errors } } = useForm();
 
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => {
+        // console.log(data);
+        signIn(data.email, data.password)
+            .then(result => {
+                const user = result.user
+                console.log(user);
+            })
+    }
 
     return (
         <div className="hero my-20">
@@ -45,7 +57,8 @@ const Login = () => {
                             </div>
 
                             <div className="form-control mt-6">
-                                <button className="btn bg-[#7cc051] text-white mb-3">Login</button>
+                                <input className="btn bg-[#7cc051] text-white mb-2" type="submit" value="Login" />
+
                                 <button className="btn bg-[#fd8250] text-white"><FaGoogle />Login With Google</button>
                             </div>
                         </form>
