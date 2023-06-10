@@ -1,16 +1,17 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
+import { Tooltip } from "react-tooltip";
 
 
 const NavBar = () => {
     // getting user from auth provider
     const { user, logOut } = useContext(AuthContext)
 
-    const handleLogOut = () =>{
+    const handleLogOut = () => {
         logOut()
-        .then(() => {})
-        .catch(error => console.log(error))
+            .then(() => { })
+            .catch(error => console.log(error))
     }
 
     const navItems = <>
@@ -39,6 +40,14 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
+                    {/* For displaying user image */}
+                    
+                    {
+                        user &&
+                        <>
+                            <img className='mask mask-circle h-10' src={user?.photoURL} alt={user.displayName} data-tooltip-id={user.displayName} data-tooltip-content={user.displayName} /><Tooltip id={user.displayName} />
+                        </>
+                    }
 
                     {
                         user ? <>

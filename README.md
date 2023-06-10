@@ -17,6 +17,8 @@
 * **React-helmet.**
 * **Swiper-js.**
 * **React-router.**
+* **Sweet Alert 2.**
+* **React-tooltip.**
 
 
 ## Links
