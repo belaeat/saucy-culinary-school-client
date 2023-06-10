@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import loginImage from '../../assets/login.jpg'
 import { FaGoogle } from "react-icons/fa";
 import { useContext } from "react";
@@ -16,6 +16,12 @@ const Login = () => {
     const { signIn } = useContext(AuthContext)
     const googleProvider = new GoogleAuthProvider()
 
+    // redirecting user
+    const navigate = useNavigate()
+    const location = useLocation()
+
+    const from = location.state?.from?.pathname || "/"
+
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = data => {
@@ -31,6 +37,7 @@ const Login = () => {
                     showConfirmButton: false,
                     timer: 1500
                 })
+                navigate(from, { replace: true })
             })
     }
 
@@ -48,6 +55,7 @@ const Login = () => {
                     showConfirmButton: false,
                     timer: 1500
                 })
+                navigate(from, { replace: true })
             })
             .catch(error => {
                 console.log(error);

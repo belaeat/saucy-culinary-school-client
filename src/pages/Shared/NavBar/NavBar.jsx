@@ -41,11 +41,11 @@ const NavBar = () => {
                 </div>
                 <div className="navbar-end">
                     {/* For displaying user image */}
-                    
+
                     {
                         user &&
                         <>
-                            <img className='mask mask-circle h-10' src={user?.photoURL} alt={user.displayName} data-tooltip-id={user.displayName} data-tooltip-content={user.displayName} /><Tooltip id={user.displayName} />
+                            <img className='mask mask-circle h-10 me-2' src={user?.photoURL} alt={user.displayName} data-tooltip-id={user.displayName} data-tooltip-content={user.displayName} /><Tooltip id={user.displayName} />
                         </>
                     }
 
