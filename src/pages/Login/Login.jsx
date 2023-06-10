@@ -4,13 +4,17 @@ import loginImage from '../../assets/login.jpg'
 import { FaGoogle } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import Swal from 'sweetalert2'
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import { app } from "../../firebase/firebase.config";
 
-
+const auth = getAuth(app);
 
 const Login = () => {
 
     // auth context 
     const { signIn } = useContext(AuthContext)
+    const googleProvider = new GoogleAuthProvider()
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
@@ -20,6 +24,33 @@ const Login = () => {
             .then(result => {
                 const user = result.user
                 console.log(user);
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Login Successful',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            })
+    }
+
+    // google sign in method
+
+    const handleGoogleSignIn = () => {
+        signInWithPopup(auth, googleProvider)
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser)
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Login Successful',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            })
+            .catch(error => {
+                console.log(error);
             })
     }
 
@@ -59,7 +90,7 @@ const Login = () => {
                             <div className="form-control mt-6">
                                 <input className="btn bg-[#7cc051] text-white mb-2" type="submit" value="Login" />
 
-                                <button className="btn bg-[#fd8250] text-white"><FaGoogle />Login With Google</button>
+                                <button onClick={handleGoogleSignIn} className="btn bg-[#fd8250] text-white"><FaGoogle />Login With Google</button>
                             </div>
                         </form>
                     </div>

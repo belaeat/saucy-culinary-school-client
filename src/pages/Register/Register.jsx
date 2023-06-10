@@ -61,15 +61,6 @@ const Register = () => {
                                 {errors.password?.type === 'pattern' && <p className="text-red-500">Password must have one capital letter and a special character.</p>}
                             </div>
 
-                            {/* <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Confirm Password</span>
-                                </label>
-                                <input type="password" {...register("confirmPassword", { required: true, minLength: 6 })} placeholder="Confirm Your Password" className="input input-bordered" />
-                                {errors.confirmPassword && <span className="text-red-500">This field is required</span>}
-                                {errors.password?.type === 'password' && <p className="text-red-500">Your both password should match!!!</p>}
-                            </div> */}
-
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Photo URL</span>
