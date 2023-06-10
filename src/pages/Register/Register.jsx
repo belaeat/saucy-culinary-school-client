@@ -1,12 +1,24 @@
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import loginImage from '../../assets/login.jpg'
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
+
 
 const Register = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
-    const onSubmit = data => console.log(data);
+    const { createUser } = useContext(AuthContext)
+
+    const onSubmit = data => {
+        console.log(data)
+        createUser(data.email, data.password)
+            .then(result => {
+                const loggedUser = result.user
+                console.log(loggedUser);
+            })
+    }
 
     return (
         <div className="hero my-20">
@@ -42,7 +54,7 @@ const Register = () => {
                                 <input type="password" {...register("password", {
                                     required: true,
                                     minLength: 6,
-                                    pattern: /(?=.*?[A-Z])(?=.*?[#?!@$%^&*-])/ 
+                                    pattern: /(?=.*?[A-Z])(?=.*?[#?!@$%^&*-])/
                                 })} placeholder="Password" className="input input-bordered" />
                                 {errors.password && <span className="text-red-500">This field is required</span>}
                                 {errors.password?.type === 'minLength' && <p className="text-red-500">Password must be 6 characters.</p>}
@@ -62,7 +74,7 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">Photo URL</span>
                                 </label>
-                                <input type="text" {...register("photoURL", { required: true })} placeholder="Password" className="input input-bordered" />
+                                <input type="text" {...register("photoURL", { required: true })} placeholder="Your photo URL" className="input input-bordered" />
                                 {errors.photoURL && <span className="text-red-500">This field is required</span>}
 
                                 <label className="label">
