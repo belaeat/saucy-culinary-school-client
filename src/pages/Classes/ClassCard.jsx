@@ -3,6 +3,10 @@
 const ClassCard = ({ item }) => {
     const { name, image, instructor, availableSeats, price } = item;
 
+    const handleAddToCart = item => {
+        console.log(item);
+    }
+
     return (
         <div className="card w-96 shadow-xl">
             <img src={image} alt="Shoes" className="rounded-xl" />
@@ -12,7 +16,7 @@ const ClassCard = ({ item }) => {
                 <p>Available Seats: {availableSeats}</p>
                 <p className="font-bold text-[#fd8250]">Price: ${price}</p>
                 <div className="card-actions">
-                    <button className="btn btn-block bg-[#7cc051] text-white">Select Class</button>
+                    <button onClick={() => handleAddToCart(item)} className="btn btn-wide bg-[#7cc051] text-white">Select Class</button>
                 </div>
             </div>
         </div>

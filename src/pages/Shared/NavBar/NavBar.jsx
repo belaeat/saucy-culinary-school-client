@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { FaShoppingCart } from "react-icons/fa";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { Tooltip } from "react-tooltip";
 
@@ -40,6 +41,13 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
+                        <Link to='/'>
+                            <button className="btn me-2">
+                                <FaShoppingCart></FaShoppingCart>
+                                <div className="badge bg-[#fd8250] text-white">0</div>
+                            </button>
+                        </Link>
+
                     {/* For displaying user image */}
 
                     {

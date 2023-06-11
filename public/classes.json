@@ -4,9 +4,10 @@
         "name": "Bakery",
         "instructor": "Gordon Ramsay",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
-        "category": "popular",
+        "category": "bakery",
         "price": 19.90,
-        "availableSeats" : 20
+        "availableSeats" : 20,
+        "students": 22
     },
     {
         "_id": "642c155b2c4774f05c36eeaa",
@@ -15,16 +16,18 @@
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
         "category": "pastry",
         "price": 29.99,
-        "availableSeats" : 12
+        "availableSeats" : 12,
+        "students": 21
     },
     {
         "_id": "642c155b2c4774f05c36eeaa",
         "name": "Fish Cuisine",
         "instructor": "Gordon Ramsay",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
-        "category": "popular",
+        "category": "fish",
         "price": 32.99,
-        "availableSeats" : 25
+        "availableSeats" : 25,
+        "students": 32
     },
     {
         "_id": "642c155b2c4774f05c36eeaa",
@@ -33,16 +36,18 @@
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
         "category": "meat",
         "price": 29.99,
-        "availableSeats" : 22
+        "availableSeats" : 22,
+        "students": 18
     },
     {
         "_id": "642c155b2c4774f05c36eeaa",
         "name": "Bangladeshi Cuisine",
         "instructor": "Keka Ferdousi",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
-        "category": "popular",
+        "category": "banngladeshi",
         "price": 15.00,
-        "availableSeats" : 30
+        "availableSeats" : 30,
+        "students": 35
     },
     {
         "_id": "642c155b2c4774f05c36eeaa",
@@ -51,7 +56,8 @@
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
         "category": "indian",
         "price": 29.99,
-        "availableSeats" : 21
+        "availableSeats" : 21,
+        "students": 11
     },
     {
         "_id": "642c155b2c4774f05c36eeaa",
@@ -60,25 +66,28 @@
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
         "category": "thai",
         "price": 35.50,
-        "availableSeats" : 17
+        "availableSeats" : 17,
+        "students": 16
     },
     {
         "_id": "642c155b2c4774f05c36eeaa",
         "name": "Arabian Cuisine",
         "instructor": "Sheikh Abdul Malik",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
-        "category": "popular",
+        "category": "arabian",
         "price": 25.00,
-        "availableSeats" : 5
+        "availableSeats" : 5,
+        "students": 30
     },
     {
         "_id": "642c155b2c4774f05c36eeaa",
         "name": "Mexican Cuisine",
         "instructor": "De Costa",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
-        "category": "popular",
+        "category": "mexican",
         "price": 44.90,
-        "availableSeats" : 11
+        "availableSeats" : 11,
+        "students": 31
     },
     {
         "_id": "642c155b2c4774f05c36eeaa",
@@ -87,25 +96,28 @@
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
         "category": "italian",
         "price": 30.00,
-        "availableSeats" : 32
+        "availableSeats" : 32,
+        "students": 17
     },
     {
         "_id": "642c155b2c4774f05c36eeaa",
         "name": "French Cuisine",
         "instructor": "Kilian Mbappe",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
-        "category": "popular",
+        "category": "french",
         "price": 49.90,
-        "availableSeats" : 9
+        "availableSeats" : 9,
+        "students": 33
     },
     {
         "_id": "642c155b2c4774f05c36eeaa",
         "name": "Chinese Cuisine",
         "instructor": "Xi Haon",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
-        "category": "popular",
+        "category": "chinese",
         "price": 32.99,
-        "availableSeats" : 38
+        "availableSeats" : 38,
+        "students": 37
     }
     
 ]
