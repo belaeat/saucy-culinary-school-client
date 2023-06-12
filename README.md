@@ -19,6 +19,8 @@
 * **React-router.**
 * **Sweet Alert 2.**
 * **React-tooltip.**
+* **TanStack-query.**
+* **React-icons.**
 
 
 ## Links
