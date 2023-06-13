@@ -45,7 +45,7 @@ const MyCart = () => {
             <div className="uppercase font-semibold flex justify-evenly h-10 items-center">
                 <h3 className="text-3xl">Total Class: {cart.length}</h3>
                 <div className="divider divider-horizontal"></div>
-                <h3 className="text-2xl">Total Price: <span className="text-[#fd8250] font-bold">${total}</span></h3>
+                <h3 className="text-2xl">Total Price: <span className="text-[#fd8250] font-bold">${total.toFixed(2)}</span></h3>
                 <div className="divider divider-horizontal"></div>
                 <button className="btn font-semibold bg-[#fd8250] text-white">Pay Now</button>
             </div>
