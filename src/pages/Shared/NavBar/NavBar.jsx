@@ -46,8 +46,8 @@ const NavBar = () => {
                 </div>
                 <div className="navbar-end">
                         <Link to='/'>
-                            <button className="btn me-2">
-                                <FaShoppingCart></FaShoppingCart>
+                            <button className="btn btn-sm me-2">
+                                <FaShoppingCart className="text-[#7cc051]"></FaShoppingCart>
                                 <div className="badge bg-[#fd8250] text-white">+{cart?.length || 0}</div>
                             </button>
                         </Link>
