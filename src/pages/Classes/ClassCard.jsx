@@ -56,7 +56,7 @@ const ClassCard = ({ item }) => {
 
     return (
         <div className="card w-96 shadow-xl">
-            <img src={image} alt="Shoes" className="rounded-xl" />
+            <img src={image} alt="Shoes" className="rounded-xl h-[300px]" />
             <div className="card-body items-center">
                 <h2 className="card-title font-bold text-2xl mb-4">{name}</h2>
                 <p className="text-xl font-semibold"> Instructor: {instructor}</p>

@@ -3,7 +3,7 @@
         "_id": "642c155b2c4774f05c36eeaa",
         "name": "Gordon Ramsay",
         "email": "gordon@example.com",
-        "image": "https://hips.hearstapps.com/hmg-prod/images/gettyimages-1148433914.jpg",
+        "image": "https://img.freepik.com/free-photo/happy-young-cook-uniform-showing-thumbs-up_171337-5330.jpg?size=626&ext=jpg&ga=GA1.1.1626759463.1684588197&semt=sph",
         "category": "bakery",
         "students": 22
     },
@@ -11,7 +11,7 @@
         "_id": "642c155b2c4774f05c36eeaa",
         "name": "M Nigel Roger",
         "email": "nigel@example.com",
-        "image": "https://hips.hearstapps.com/hmg-prod/images/gettyimages-1148433914.jpg",
+        "image": "https://img.freepik.com/free-photo/male-chef-kitchen-cooking_23-2148934673.jpg?size=626&ext=jpg&ga=GA1.1.1626759463.1684588197&semt=ais",
         "category": "pastry",
         "students": 21
     },
@@ -19,7 +19,7 @@
         "_id": "642c155b2c4774f05c36eeaa",
         "name": "Ramim Ahmed",
         "email": "ramim@example.com",
-        "image": "https://hips.hearstapps.com/hmg-prod/images/gettyimages-1148433914.jpg",
+        "image": "https://img.freepik.com/free-photo/portrait-smiling-chef-uniform_329181-675.jpg?size=626&ext=jpg&ga=GA1.2.1626759463.1684588197&semt=sph",
         "category": "meat",
         "students": 18
     },
@@ -27,7 +27,7 @@
         "_id": "642c155b2c4774f05c36eeaa",
         "name": "Keka Ferdousi",
         "email": "keka@example.com",
-        "image": "https://hips.hearstapps.com/hmg-prod/images/gettyimages-1148433914.jpg",
+        "image": "https://img.freepik.com/free-photo/man-cook-holds-pan-with-vegetables-flying-air_613910-10109.jpg?size=626&ext=jpg&ga=GA1.1.1626759463.1684588197&semt=sph",
         "category": "banngladeshi",
         "students": 35
     },
@@ -35,7 +35,7 @@
         "_id": "642c155b2c4774f05c36eeaa",
         "name": "Shuvrata Das",
         "email": "shuvrata@example.com",
-        "image": "https://hips.hearstapps.com/hmg-prod/images/gettyimages-1148433914.jpg",
+        "image": "https://img.freepik.com/free-photo/happy-young-cook-uniform-holding-salad_171337-5342.jpg?size=626&ext=jpg&ga=GA1.2.1626759463.1684588197&semt=sph",
         "category": "indian",
         "students": 11
     },
@@ -43,7 +43,7 @@
         "_id": "642c155b2c4774f05c36eeaa",
         "name": "Sheikh Abdul Malik",
         "email": "abdul@example.com",
-        "image": "https://hips.hearstapps.com/hmg-prod/images/gettyimages-1148433914.jpg",
+        "image": "https://img.freepik.com/free-photo/view-chef-working-kitchen_23-2149728027.jpg?size=626&ext=jpg&ga=GA1.2.1626759463.1684588197&semt=sph",
         "category": "arabian",
         "students": 30
     },
@@ -51,7 +51,7 @@
         "_id": "642c155b2c4774f05c36eeaa",
         "name": "De Costa",
         "email": "costa@example.com",
-        "image": "https://hips.hearstapps.com/hmg-prod/images/gettyimages-1148433914.jpg",
+        "image": "https://img.freepik.com/free-photo/mid-shot-chef-holding-plate-with-pasta-making-ok-sign_23-2148794087.jpg?size=626&ext=jpg&ga=GA1.2.1626759463.1684588197&semt=sph",
         "category": "mexican",
         "students": 31
     },
@@ -59,7 +59,7 @@
         "_id": "642c155b2c4774f05c36eeaa",
         "name": "Manuel Balotelli",
         "email": "manuel@example.com",
-        "image": "https://hips.hearstapps.com/hmg-prod/images/gettyimages-1148433914.jpg",
+        "image": "https://img.freepik.com/free-photo/studio-portrait-cook-man-with-fresh-vegetables-table_613910-9893.jpg?size=626&ext=jpg&ga=GA1.2.1626759463.1684588197&semt=sph",
         "category": "italian",
         "students": 17
     },
@@ -67,7 +67,7 @@
         "_id": "642c155b2c4774f05c36eeaa",
         "name": "Kilian Mbappe",
         "email": "kilian@example.com",
-        "image": "https://hips.hearstapps.com/hmg-prod/images/gettyimages-1148433914.jpg",
+        "image": "https://img.freepik.com/free-photo/portrait-positive-smiling-head-chef-standing-professional-restaurant-kitchen-while-looking-camera-confident-man-wearing-food-industry-white-uniform-while-preparing-delicious-meal_482257-40117.jpg?size=626&ext=jpg&ga=GA1.2.1626759463.1684588197&semt=sph",
         "category": "french",
         "students": 33
     },
@@ -75,7 +75,7 @@
         "_id": "642c155b2c4774f05c36eeaa",
         "name": "Xi Haon",
         "email": "haon@example.com",
-        "image": "https://hips.hearstapps.com/hmg-prod/images/gettyimages-1148433914.jpg",
+        "image": "https://img.freepik.com/free-photo/happy-male-chef-cook-restaurant-kitchen_496169-81.jpg?size=626&ext=jpg&ga=GA1.2.1626759463.1684588197&semt=sph",
         "category": "chinese",
         "students": 37
     }
