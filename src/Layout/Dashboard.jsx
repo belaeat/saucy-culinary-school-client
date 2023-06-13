@@ -1,11 +1,14 @@
 import { Outlet } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import { FaShoppingCart, FaWallet, FaHome, FaBook } from "react-icons/fa";
+import { FaShoppingCart, FaWallet, FaHome, FaBook, FaUserAlt } from "react-icons/fa";
 import useCart from "../hooks/useCart";
 
 
 const Dashboard = () => {
     const [cart] = useCart()
+
+    // TODO: Load Data from the server to have dynamic isAdmin based on data
+    const isAdmin = true;
 
     return (
         <div className="drawer lg:drawer-open">
@@ -20,10 +23,20 @@ const Dashboard = () => {
                 <ul className="menu p-4 w-80 text-base-content">
                     {/* Sidebar content here */}
 
-                    <li>
-                        <NavLink to='/dashboard/mycart'><FaShoppingCart /> My Selected Class <span className="badge bg-[#fd8250] text-white">+{cart?.length || 0}</span></NavLink>
-                    </li>
-                    <li><NavLink to='/dashboard/enrolled'><FaWallet /> My Enrolled Class</NavLink></li>
+                    {
+                        isAdmin ? <>
+                            <li>
+                                <NavLink to='/dashboard/mycart'><FaBook /> Manage Classes</NavLink>
+                            </li>
+                            <li><NavLink to='/dashboard/allusers'><FaUserAlt /> Manage Users</NavLink></li>
+                        </> : <>
+                            <li>
+                                <NavLink to='/dashboard/mycart'><FaShoppingCart /> My Selected Class <span className="badge bg-[#fd8250] text-white">+{cart?.length || 0}</span></NavLink>
+                            </li>
+                            <li><NavLink to='/dashboard/enrolled'><FaWallet /> My Enrolled Class</NavLink></li>
+                        </>
+                    }
+
                     <div className="divider"></div>
                     <li><NavLink to="/"><FaHome /> Home</NavLink></li>
                     <li><NavLink to="/classes"><FaBook />See All Classes</NavLink></li>

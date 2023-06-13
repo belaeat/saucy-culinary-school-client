@@ -50,14 +50,26 @@ const Login = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser)
-                Swal.fire({
-                    position: 'top-end',
-                    icon: 'success',
-                    title: 'Login Successful',
-                    showConfirmButton: false,
-                    timer: 1500
+
+                const savedUser = { name: loggedUser.displayName, email: loggedUser.email }
+                fetch('http://localhost:5000/users', {
+                    method: "POST",
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(savedUser)
                 })
-                navigate(from, { replace: true })
+                    .then(res => res.json())
+                    .then(() => {
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'success',
+                            title: 'Login successful!!',
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
+                        navigate(from, { replace: true })
+                    })
             })
             .catch(error => {
                 console.log(error);
