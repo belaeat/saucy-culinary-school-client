@@ -24,8 +24,7 @@ const NavBar = () => {
     </>
 
     return (
-        <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar fixed z-10 px-10 bg-opacity-30 bg-black text-white max-w-screen-xl">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -38,8 +37,11 @@ const NavBar = () => {
                     <Link className="text-3xl font-bold" to='/'>Saucy Culinary</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 font-semibold">
+                    <ul className="menu menu-horizontal px-1 font-semibold items-center">
                         {navItems}
+                        {
+                            user && <Link className="ms-4" to='/dashboard'>Dashboard</Link>
+                        }
                     </ul>
                 </div>
                 <div className="navbar-end">
@@ -61,7 +63,6 @@ const NavBar = () => {
 
                     {
                         user ? <>
-                            <Link className="btn border-none bg-[#7cc051] text-white me-2" to='/dashboard'>Dashboard</Link>
                             <button onClick={handleLogOut} className="btn border-none bg-[#7cc051] text-white">Logout</button>
                         </> : <>
                             <p className="btn border-none bg-[#7cc051] text-white"><Link to='/login'>Login</Link></p>
@@ -69,7 +70,6 @@ const NavBar = () => {
                     }
                 </div>
             </div>
-        </div>
     );
 };
 

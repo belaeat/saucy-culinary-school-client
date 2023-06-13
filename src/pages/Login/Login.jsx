@@ -8,6 +8,8 @@ import Swal from 'sweetalert2'
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import { app } from "../../firebase/firebase.config";
 
+import loginBanner from '../../assets/banner/login-banner.png'
+
 const auth = getAuth(app);
 
 const Login = () => {
@@ -63,48 +65,55 @@ const Login = () => {
     }
 
     return (
-        <div className="hero my-20">
-            <div className="flex flex-col lg:flex-row items-center justify-around">
-                <img className="w-1/3" src={loginImage} alt="" />
-                <div className="hero-content flex-col">
-                    <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">Login now!</h1>
-                    </div>
+        <div>
+            {/* Login Banner */}
+            <div>
+                <img src={loginBanner} alt="" />
+            </div>
+            <div className="hero my-20">
+                <div className="flex flex-col lg:flex-row items-center justify-around">
+                    <img className="w-1/3" src={loginImage} alt="" />
+                    <div className="hero-content flex-col">
+                        <div className="text-center lg:text-left">
+                            <h1 className="text-5xl font-bold">Login now!</h1>
+                        </div>
 
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+                        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                            <form onSubmit={handleSubmit(onSubmit)} className="card-body">
 
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Email</span>
-                                </label>
-                                <input type="email" {...register("email", { required: true })} placeholder="Your email" className="input input-bordered" />
-                                {errors.email && <span className="text-red-500">This field is required</span>}
-                            </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Email</span>
+                                    </label>
+                                    <input type="email" {...register("email", { required: true })} placeholder="Your email" className="input input-bordered" />
+                                    {errors.email && <span className="text-red-500">This field is required</span>}
+                                </div>
 
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Password</span>
-                                </label>
-                                <input type="password" {...register("password", { required: true })} placeholder="Password" className="input input-bordered" />
-                                {errors.password && <span className="text-red-500">This field is required</span>}
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Password</span>
+                                    </label>
+                                    <input type="password" {...register("password", { required: true })} placeholder="Password" className="input input-bordered" />
+                                    {errors.password && <span className="text-red-500">This field is required</span>}
 
-                                <label className="label">
-                                    <p className="label-text-alt">New here? Please <Link className="text-[#7cc051]" to='/register'>Register.</Link></p>
-                                </label>
+                                    <label className="label">
+                                        <p className="label-text-alt">New here? Please <Link className="text-[#7cc051] font-bold text-sm" to='/register'>Register.</Link></p>
+                                    </label>
 
-                            </div>
+                                </div>
 
-                            <div className="form-control mt-6">
-                                <input className="btn bg-[#7cc051] text-white mb-2" type="submit" value="Login" />
+                                <div className="form-control mt-6">
+                                    <input className="btn bg-[#7cc051] text-white mb-2" type="submit" value="Login" />
 
-                                <button onClick={handleGoogleSignIn} className="btn bg-[#fd8250] text-white"><FaGoogle />Login With Google</button>
-                            </div>
-                        </form>
+                                    <button onClick={handleGoogleSignIn} className="btn bg-[#fd8250] text-white"><FaGoogle />Login With Google</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
     );
 };
 
