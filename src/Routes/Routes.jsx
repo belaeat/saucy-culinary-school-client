@@ -8,8 +8,9 @@ import Register from "../pages/Register/Register";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Instructors from "../pages/Instructors/Instructors";
 import Classes from "../pages/Classes/Classes";
-import Dashboard from "../pages/Dashboard/Dashboard";
 import PrivateRoute from "./PrivateRoute";
+import Dashboard from "../Layout/Dashboard";
+import MyCart from "../pages/Dashboard/MyCart/MyCart";
 
 export const router = createBrowserRouter([
     {
@@ -37,9 +38,15 @@ export const router = createBrowserRouter([
                 path: 'classes',
                 element: <Classes></Classes>
             },
+        ],
+    },
+    {
+        path: 'dashboard',
+        element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+        children: [
             {
-                path: 'dashboard',
-                element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>
+                path: 'mycart',
+                element: <MyCart></MyCart>
             }
         ]
     },
