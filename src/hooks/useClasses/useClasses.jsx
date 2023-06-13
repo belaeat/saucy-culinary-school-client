@@ -8,7 +8,7 @@ const useClasses = () => {
 
     // loading menu data from local json file and filtering data within same file
     useEffect(() => {
-        fetch("classes.json")
+        fetch("http://localhost:5000/classes")
             .then(res => res.json())
             .then(data => {
                 setClasses(data)
