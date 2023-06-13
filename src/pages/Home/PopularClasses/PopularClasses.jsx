@@ -1,10 +1,18 @@
-import useClasses from "../../../hooks/useClasses/useClasses";
+import { useState } from "react";
 import PopularClassCard from "../PopularClassCard/PopularClassCard";
+import { useEffect } from "react";
 
 
 const PopularClasses = () => {
-    const [classes] = useClasses()
-    const popularClass = classes.slice(0, 6)
+
+    const [popularClasses, setPopularClasses] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/popularClasses')
+            .then(res => res.json())
+            .then(data => setPopularClasses(data))
+    }, [])
+
 
     return (
         <div>
@@ -14,7 +22,7 @@ const PopularClasses = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-12">
                 {
-                    popularClass.map(item => <PopularClassCard
+                    popularClasses.map(item => <PopularClassCard
                         key={item._id}
                         item={item}
                     ></PopularClassCard>)
