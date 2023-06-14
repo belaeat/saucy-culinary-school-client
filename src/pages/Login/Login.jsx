@@ -108,7 +108,7 @@ const Login = () => {
                                     </label>
                                     <div className="input-group">
                                         <input type={show ? "text" : "password"} {...register("password", { required: true })} placeholder="Password" className="input input-bordered" />
-                                        <button onClick={() => setShow(!show)} className="text-[#7cc051] bg-base-200 p-4"><FaEye /></button>
+                                        <p onClick={() => setShow(!show)} className="text-[#7cc051] bg-base-200 p-4"><FaEye /></p>
                                     </div>
                                     {errors.password && <span className="text-red-500">This field is required</span>}
 
