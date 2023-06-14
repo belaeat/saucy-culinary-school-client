@@ -21,6 +21,8 @@
 * **React-tooltip.**
 * **TanStack-query.**
 * **React-icons.**
+* **Axios.**
+* **React-darkreaders.**
 
 
 ## Links
