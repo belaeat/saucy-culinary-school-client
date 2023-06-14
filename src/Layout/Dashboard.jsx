@@ -9,6 +9,7 @@ const Dashboard = () => {
 
     // TODO: Load Data from the server to have dynamic isAdmin based on data
     const isAdmin = true;
+    const isInstructor = true;
 
     return (
         <div className="drawer lg:drawer-open">
@@ -36,7 +37,14 @@ const Dashboard = () => {
                             <li><NavLink to='/dashboard/enrolled'><FaWallet /> My Enrolled Class</NavLink></li>
                         </>
                     }
-
+                    {
+                        isInstructor && <>
+                            <li>
+                                <NavLink to='/dashboard/mycart'><FaBook /> Add a Class</NavLink>
+                            </li>
+                            <li><NavLink to='/dashboard/allusers'><FaUserAlt /> My Classes</NavLink></li>
+                        </>
+                    }
                     <div className="divider"></div>
                     <li><NavLink to="/"><FaHome /> Home</NavLink></li>
                     <li><NavLink to="/classes"><FaBook />See All Classes</NavLink></li>
