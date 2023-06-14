@@ -12,6 +12,7 @@ const NavBar = () => {
     const { user, logOut } = useContext(AuthContext)
     const [cart] = useCart()
 
+    // for dark mode
     const [isDark, { toggle }] = useDarkreader(false);
 
     const handleLogOut = () => {
