@@ -6,7 +6,7 @@ const useInstructors = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        fetch("http://localhost:5000/instructors")
+        fetch("https://saucy-culinary-school-server-production.up.railway.app/instructors")
             .then(res => res.json())
             .then(data => {
                 setInstructors(data)

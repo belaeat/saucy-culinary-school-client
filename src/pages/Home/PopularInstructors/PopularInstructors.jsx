@@ -8,7 +8,7 @@ const PopularInstructors = () => {
     const [popularInstructors, setPopularClasses] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/popularInstructors')
+        fetch('https://saucy-culinary-school-server-production.up.railway.app/popularInstructors')
             .then(res => res.json())
             .then(data => setPopularClasses(data))
     }, [])

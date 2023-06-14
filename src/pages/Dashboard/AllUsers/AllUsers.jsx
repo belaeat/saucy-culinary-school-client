@@ -13,7 +13,7 @@ const AllUsers = () => {
 
     // making admin
     const handleMakeAdmin = user => {
-        fetch(`http://localhost:5000/users/admin/${user._id}`, {
+        fetch(`https://saucy-culinary-school-server-production.up.railway.app/users/admin/${user._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())
@@ -34,7 +34,7 @@ const AllUsers = () => {
 
     // making instructor
     const handleMakeInstructor = user => {
-        axios.patch(`http://localhost:5000/users/instructor/${user._id}`)
+        axios.patch(`https://saucy-culinary-school-server-production.up.railway.app/users/instructor/${user._id}`)
             .then(res => {
                 console.log(res.data);
                 if (res.data.modifiedCount) {
