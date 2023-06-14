@@ -1,15 +1,17 @@
 import { useForm } from 'react-hook-form';
+import useAxiosSecure from '../../../hooks/useAxiosSecure';
+import Swal from 'sweetalert2';
 
 
 const img_hosting_token = import.meta.env.VITE_Image_Upload_token;
 
 const AddClass = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const [axiosSecure] = useAxiosSecure()
+    const { register, handleSubmit, reset } = useForm();
 
     const image_hosting_url = `https://api.imgbb.com/1/upload?key=${img_hosting_token}`
 
     const onSubmit = data => {
-
         const formData = new FormData()
         formData.append('image', data.image[0])
 
@@ -20,18 +22,32 @@ const AddClass = () => {
             .then(res => res.json())
             .then(imgResponse => {
                 console.log(imgResponse)
-                if(imgResponse.success){
+                if (imgResponse.success) {
                     const imgURL = imgResponse.data.display_url;
 
-                    const {name, instructor, instructorEmail, availableSeats, price} = data;
+                    const { name, instructor, instructorEmail, availableSeats, price } = data;
 
-                    const newClass = {name, instructor, instructorEmail, availableSeats: parseInt(availableSeats), price: parseFloat(price), image:imgURL}
+                    const newClass = { name, instructor, instructorEmail, availableSeats: parseInt(availableSeats), price: parseFloat(price), image: imgURL }
                     console.log(newClass);
+
+                    axiosSecure.post('/classes', newClass)
+                        .then(data => {
+                            console.log("after posting new class", data.data);
+                            if(data.data.insertedId){
+                                reset()
+                                Swal.fire({
+                                    position: 'top-end',
+                                    icon: 'success',
+                                    title: "New Class Added!",
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                })
+                            }
+                        })
                 }
             })
-        
+
     };
-    console.log(errors);
 
     return (
         <div className="w-full">
