@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import loginImage from '../../assets/login.jpg'
-import { FaGoogle } from "react-icons/fa";
-import { useContext } from "react";
+import { FaGoogle, FaEye } from "react-icons/fa";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from 'sweetalert2'
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
@@ -13,6 +13,7 @@ import loginBanner from '../../assets/banner/login-banner.png'
 const auth = getAuth(app);
 
 const Login = () => {
+    const [show, setShow] = useState(false)
 
     // auth context 
     const { signIn } = useContext(AuthContext)
@@ -105,7 +106,10 @@ const Login = () => {
                                     <label className="label">
                                         <span className="label-text">Password</span>
                                     </label>
-                                    <input type="password" {...register("password", { required: true })} placeholder="Password" className="input input-bordered" />
+                                    <div className="input-group">
+                                        <input type={show ? "text" : "password"} {...register("password", { required: true })} placeholder="Password" className="input input-bordered" />
+                                        <button onClick={() => setShow(!show)} className="text-[#7cc051] bg-base-200 p-4"><FaEye /></button>
+                                    </div>
                                     {errors.password && <span className="text-red-500">This field is required</span>}
 
                                     <label className="label">
